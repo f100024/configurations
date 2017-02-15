@@ -1,0 +1,9 @@
+
+# Golang setup                                                                                                                                                                                                                                                                                                               
+export GOROOT=/usr/local/go                                                                                                                                                                                                                                                                                                  
+export PATH=$PATH:$GOROOT/bin
+export GOPATH=/home/$USER/golibs
+export PATH=$PATH:$GOPATH/bin
+export GOCACHE=/home/$USER/.cache/go-build
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
