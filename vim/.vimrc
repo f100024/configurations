@@ -142,7 +142,9 @@ call vundle#end()            " required
 " General settings
 "=====================================================
 " Autosave on startup
-let g:auto_save = 1 
+let g:auto_save = 0
+let g:auto_save_events = ["InsertLeave", "TextChanged"]
+map <s-a><s-s> :AutoSaveToggle<CR>
 
 " So that vim-gitgutter will update the screen more often
 set updatetime=100
