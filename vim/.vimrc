@@ -122,6 +122,7 @@ Plugin 'stefandtw/quickfix-reflector.vim'  " In the quickfix window, simply edit
 Plugin 'airblade/vim-gitgutter'
 Plugin '907th/vim-auto-save' 
 Plugin 'rykka/riv.vim'
+Plugin 'aserebryakov/vim-todo-lists'
 " ---      ---
 
 " All of your Plugins must be added before the following line
@@ -226,6 +227,9 @@ map <S-n> :set invnumber<CR>
 " Set cursor line by default
 set cursorline
 
+" Parameters for plugin: aserebryakov/vim-todo-lists
+let g:VimTodoListsDatesEnabled = 1
+let g:VimTodoListsDatesFormat = "%H:%M:%S, %A %d.%m.%Y"
 "=====================================================
 " Terraform settings
 "=====================================================
