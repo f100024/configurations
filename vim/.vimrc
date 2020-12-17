@@ -104,6 +104,28 @@ Plugin 'leafgarland/typescript-vim'        " Typescript syntax files for Vim
 
 " --- Golang ---
 Plugin 'fatih/vim-go'                      " Support Golang
+Plugin 'Shougo/neocomplete.vim'
+
+" Go syntax highlighting
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_operators = 1
+
+" Auto formatting and importing
+let g:go_fmt_autosave = 1
+let g:go_fmt_command = "goimports"
+
+" Status line types/signatures
+let g:go_auto_type_info = 1
+
+" Map keys for most used commands.
+" Ex: `\b` for building, `\r` for running and `\b` for running test.
+autocmd FileType go nmap <leader>b  <Plug>(go-build)
+autocmd FileType go nmap <leader>r  <Plug>(go-run)
+autocmd FileType go nmap <leader>t  <Plug>(go-test)
+"autocmd filetype go inoremap <buffer> . .<C-x><C-o>  " This could be pretty annoying;
 
 " --- Bash ---
 Plugin 'bash-support.vim' " Bash support
