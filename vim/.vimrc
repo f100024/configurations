@@ -105,6 +105,7 @@ Plugin 'leafgarland/typescript-vim'        " Typescript syntax files for Vim
 " --- Golang ---
 Plugin 'fatih/vim-go'                      " Support Golang
 Plugin 'Shougo/neocomplete.vim'
+Plugin 'sebdah/vim-delve'                  " Go Delve
 
 " Go syntax highlighting
 let g:go_highlight_fields = 1
@@ -145,6 +146,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin '907th/vim-auto-save' 
 Plugin 'rykka/riv.vim'
 Plugin 'aserebryakov/vim-todo-lists'
+
 " ---      ---
 
 " All of your Plugins must be added before the following line
@@ -222,6 +224,7 @@ augroup vimrc_autocmds
 augroup END
 
 " SnipMate
+let g:snipMate = { 'snippet_version' : 1 }
 let g:snippets_dir = "~/.vim/vim-snippets/snippets"
 
 " TagBar
