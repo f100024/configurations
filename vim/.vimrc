@@ -1,7 +1,10 @@
 
-set t_Co=256
+"let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_invert_tabline=1
+let g:gruvbox_transparent_bg=0
 set background=dark
-colorscheme PaperColor
+set t_Co=256
+colorscheme gruvbox
 
 " To turn on line numbering
 set laststatus=5
@@ -53,7 +56,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'L9'
 
 "---------=== Themes install ===-----
-Plugin 'NLKNguyen/papercolor-theme'     " Paper color theme
+Plugin 'morhetz/gruvbox'                " Gruvbox install
 
 "---------=== Code/project navigation and mis c===-----
 Plugin 'scrooloose/nerdtree'               " Project and file navigation
@@ -65,8 +68,6 @@ Plugin 'ekalinin/dockerfile.vim'           " Vim syntax file & snippets for Dock
 "------------------=== Other ===----------------------
 Plugin 'vim-airline/vim-airline'           " Lean & mean status/tabline for vim
 Plugin 'vim-airline/vim-airline-themes'    " A collection of themes for vim-airline
-"[MUTED] Plugin 'rosenfeld/conque-term'             " Consoles as buffers
-"[MUTED] Plugin 'gingerhot/conque-term-vim'
 Plugin 'tpope/vim-surround'                " Parentheses, brackets, quotes, XML tags, and more
 Plugin 'avakhov/vim-yaml'                  " Indent yaml
 Plugin 'glench/vim-jinja2-syntax'          " Jinja2 syntax support
@@ -83,7 +84,6 @@ Plugin 'honza/vim-snippets'                " snippets repo
 Plugin 'python-mode/python-mode'           " Python mode (docs, refactor, lints, highlighting, run and ipdb and more)
 Plugin 'davidhalter/jedi-vim'              " Autocompletion support
 Plugin 'mitsuhiko/vim-jinja'               " Jinja support for vim
-Plugin 'mitsuhiko/vim-python-combined'     " Combined Python 2/3 for Vim
 Plugin 'nvie/vim-flake8'
 Plugin 'hynek/vim-python-pep8-indent'      " PEP8 indent
 
@@ -126,7 +126,7 @@ let g:go_auto_type_info = 1
 autocmd FileType go nmap <leader>b  <Plug>(go-build)
 autocmd FileType go nmap <leader>r  <Plug>(go-run)
 autocmd FileType go nmap <leader>t  <Plug>(go-test)
-"autocmd filetype go inoremap <buffer> . .<C-x><C-o>  " This could be pretty annoying;
+"autocmd Filetype go inoremap <buffer> . .<C-x><C-o> " This could be pretty annoying;
 
 " --- Bash ---
 Plugin 'bash-support.vim' " Bash support
@@ -139,22 +139,18 @@ Plugin 'juliosueiras/vim-terraform-completion'  " Terraform auto-completion
 Plugin 'scrooloose/syntastic'              " Syntax checking hacks for vim 
 Plugin 'junegunn/fzf.vim'                  " Fzf plugin
 Plugin 'yegappan/taglist'
-"PLugin 'vim-vdebug/vdebug'
 Plugin 'preservim/nerdcommenter'           " Comment functions so powerful—no comment necessary.
 Plugin 'stefandtw/quickfix-reflector.vim'  " In the quickfix window, simply edit any entry you like.
 Plugin 'airblade/vim-gitgutter'
 Plugin '907th/vim-auto-save' 
 Plugin 'rykka/riv.vim'
-Plugin 'aserebryakov/vim-todo-lists'
 
+Plugin 'puremourning/vimspector'
 " ---      ---
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-"filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
+
 " Brief help
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
@@ -174,7 +170,6 @@ map <s-a><s-s> :AutoSaveToggle<CR>
 
 " So that vim-gitgutter will update the screen more often
 set updatetime=100
-
 set backspace=indent,eol,start " For backwards compatibility with version 5.4
 
 "aunmenu Help. aunmenu Window.
@@ -204,7 +199,6 @@ set enc=utf-8        " use utf-8 by default
 set ls=2             " always show status bar
 set incsearch        " incremental search
 set hlsearch         " highlight search results
-"set nu               " Show strings numbers
 
 " Turn off panels
 set guioptions-=m    " menu
@@ -243,7 +237,7 @@ set pastetoggle=<F7>
 
 " Buffers
 map <S-c> :bn<CR>
-map <S-x> :bd<CR>
+map <S-x> :ene<CR>:bw #<CR>
 map <S-z> :bp<CR>
 
 " Toggle number lines
@@ -252,9 +246,6 @@ map <S-n> :set invnumber<CR>
 " Set cursor line by default
 set cursorline
 
-" Parameters for plugin: aserebryakov/vim-todo-lists
-let g:VimTodoListsDatesEnabled = 1
-let g:VimTodoListsDatesFormat = "%H:%M:%S, %A %d.%m.%Y"
 "=====================================================
 " Terraform settings
 "=====================================================
@@ -282,6 +273,7 @@ let g:pymode_lint_ignore="E501,W601,C0110"
 let g:pymode_lint_write = 1
 " support virtualenv
 let g:pymode_virtualenv = 1
+
 "=====================================================
 " User hotkeys
 "=====================================================
@@ -308,8 +300,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='tomorrow'
 
-if exists('$TMUX') && &term == "screen-256color"
-" Colors in tmux
-    set t_ut=
-endif
+"if exists('$TMUX') && &term == "screen-256color"
+"" Colors in tmux
+"    set t_ut=
+"endif
 
