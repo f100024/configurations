@@ -73,6 +73,7 @@ Plugin 'avakhov/vim-yaml'                  " Indent yaml
 Plugin 'glench/vim-jinja2-syntax'          " Jinja2 syntax support
 Plugin 'plasticboy/vim-markdown'           " Markdown support
 Plugin 'godlygeek/tabular'                 " Vim script for text filtering and alignment
+Plugin 'milch/vim-fastlane'                " Vim support for fastlane files
 
 "--------------=== Snippets support ===---------------
 Plugin 'garbas/vim-snipmate'               " Snippets manager
