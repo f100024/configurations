@@ -145,8 +145,6 @@ Plugin 'stefandtw/quickfix-reflector.vim'  " In the quickfix window, simply edit
 Plugin 'airblade/vim-gitgutter'
 Plugin '907th/vim-auto-save' 
 Plugin 'rykka/riv.vim'
-
-Plugin 'puremourning/vimspector'
 " ---      ---
 
 " All of your Plugins must be added before the following line
